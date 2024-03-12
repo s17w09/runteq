@@ -1,0 +1,25 @@
+<div class='d-flex justify-content-between mt-3'>
+  <h1>Posts一覧</h1>
+  <p>
+    <%= link_to "投稿", new_post_path, class: 'btn btn-dark' %>
+  </p>
+</div>
+
+<div class='container'>
+  <div class="row">
+    <table class='table'>
+      <thead>
+        <tr>
+          <th class='col-3'>タイトル</th>
+          <th class='col-5'>本文</th>
+          <th class='col-4'></th>
+        </tr>
+      </thead>
+      <%= render @posts %>
+    </table>
+  </div>
+</div>
+
+<div class='my-3'>
+  <%= paginate @posts %>
+</div>
